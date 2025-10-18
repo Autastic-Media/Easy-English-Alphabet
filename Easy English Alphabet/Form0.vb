@@ -26,10 +26,14 @@ Public Class Form0
         Label5.Top = labelTop
         Label6.Top = labelTop
 
-        If My.Settings.LastVolume > 0 Then
-            Globals.VolumeLevel = CInt(My.Settings.LastVolume * 100)
+        Dim storedVolume = My.Settings.LastVolume
+
+        If storedVolume > 0 And storedVolume < 1 Then
+            Globals.VolumeLevel = CInt(storedVolume * 100)
         Else
             Globals.VolumeLevel = 50 ' Start at half volume
+            My.Settings.LastVolume = 0.5F
+            My.Settings.Save()
         End If
 
         TrackBar_Volume.Value = Globals.VolumeLevel
