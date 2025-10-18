@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Costura.Fody.6.0.0\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.6.0.0\build\Costura.Fody.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C10E66AB-9B6B-47C8-89E2-1B4EA72884E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Easy_English_Alphabet.My.MyApplication</StartupObject>
+    <RootNamespace>Easy_English_Alphabet</RootNamespace>
+    <AssemblyName>Easy English Alphabet</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Easy English Alphabet.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Easy English Alphabet.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Easy_Alphabet.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>297913CC706A9A73FD3560D7C53215FFD9EBBDFE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Easy English Alphabet_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+<PropertyGroup>
+  <ApplicationIcon>easy_alphabet.ico</ApplicationIcon> <!-- Optional: ceremonial icon -->
+</PropertyGroup>
+
+<ItemGroup>
+  <!-- Local PowerPacks reference -->
+  <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+    <SpecificVersion>False</SpecificVersion>
+    <HintPath>.\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+  </Reference>
+
+  <!-- NAudio reference from local lib folder -->
+  <Reference Include="NAudio, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <HintPath>lib\NAudio.dll</HintPath>
+    <Private>True</Private>
+  </Reference>
+
+  <!-- Full framework references -->
+  <Reference Include="System" />
+  <Reference Include="mscorlib" />
+  <Reference Include="System.Data" />
+  <Reference Include="System.Deployment" />
+  <Reference Include="System.Drawing" />
+  <Reference Include="System.Windows.Forms" />
+  <Reference Include="System.Xml" />
+  <Reference Include="System.Core" />
+  <Reference Include="System.Xml.Linq" />
+  <Reference Include="System.Data.DataSetExtensions" />
+</ItemGroup>
+
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="AudioHelper.vb" />
+    <Compile Include="Form0.Designer.vb">
+      <DependentUpon>Form0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TakeQuiz4.Designer.vb">
+      <DependentUpon>Form_TakeQuiz4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TakeQuiz4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TakeQuiz3.Designer.vb">
+      <DependentUpon>Form_TakeQuiz3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TakeQuiz3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TakeQuiz2.Designer.vb">
+      <DependentUpon>Form_TakeQuiz2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TakeQuiz2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TakeQuiz1.Designer.vb">
+      <DependentUpon>Form_TakeQuiz1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TakeQuiz1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz2_2.Designer.vb">
+      <DependentUpon>Form_Quiz2_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz2_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz2_3.Designer.vb">
+      <DependentUpon>Form_Quiz2_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz2_3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz3_1.Designer.vb">
+      <DependentUpon>Form_Quiz3_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz3_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz3_2.Designer.vb">
+      <DependentUpon>Form_Quiz3_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz3_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz3_3.Designer.vb">
+      <DependentUpon>Form_Quiz3_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz3_3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz4_1.Designer.vb">
+      <DependentUpon>Form_Quiz4_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz4_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz4_2.Designer.vb">
+      <DependentUpon>Form_Quiz4_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz4_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz4_3.Designer.vb">
+      <DependentUpon>Form_Quiz4_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz4_3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz1_Done.Designer.vb">
+      <DependentUpon>Form_Quiz1_Done.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz1_Done.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz2_Done.Designer.vb">
+      <DependentUpon>Form_Quiz2_Done.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz2_Done.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz3_Done.Designer.vb">
+      <DependentUpon>Form_Quiz3_Done.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz3_Done.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz4_Done.Designer.vb">
+      <DependentUpon>Form_Quiz4_Done.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz4_Done.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_About.Designer.vb">
+      <DependentUpon>Form_About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz1_1.Designer.vb">
+      <DependentUpon>Form_Quiz1_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz1_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz1_2.Designer.vb">
+      <DependentUpon>Form_Quiz1_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz1_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz1_3.Designer.vb">
+      <DependentUpon>Form_Quiz1_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz1_3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quiz2_1.Designer.vb">
+      <DependentUpon>Form_Quiz2_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quiz2_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLog.Designer.vb">
+      <DependentUpon>FormLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Globals.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Security\Cryptography.vb" />
+    <Compile Include="Security\Globals.vb" />
+    <Compile Include="Security\Licence.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form0.resx">
+      <DependentUpon>Form0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TakeQuiz4.resx">
+      <DependentUpon>Form_TakeQuiz4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TakeQuiz3.resx">
+      <DependentUpon>Form_TakeQuiz3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TakeQuiz2.resx">
+      <DependentUpon>Form_TakeQuiz2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TakeQuiz1.resx">
+      <DependentUpon>Form_TakeQuiz1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz2_2.resx">
+      <DependentUpon>Form_Quiz2_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz2_3.resx">
+      <DependentUpon>Form_Quiz2_3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz3_1.resx">
+      <DependentUpon>Form_Quiz3_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz3_2.resx">
+      <DependentUpon>Form_Quiz3_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz3_3.resx">
+      <DependentUpon>Form_Quiz3_3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz4_1.resx">
+      <DependentUpon>Form_Quiz4_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz4_2.resx">
+      <DependentUpon>Form_Quiz4_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz4_3.resx">
+      <DependentUpon>Form_Quiz4_3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz1_Done.resx">
+      <DependentUpon>Form_Quiz1_Done.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz2_Done.resx">
+      <DependentUpon>Form_Quiz2_Done.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz3_Done.resx">
+      <DependentUpon>Form_Quiz3_Done.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz4_Done.resx">
+      <DependentUpon>Form_Quiz4_Done.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_About.resx">
+      <DependentUpon>Form_About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz1_1.resx">
+      <DependentUpon>Form_Quiz1_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz1_2.resx">
+      <DependentUpon>Form_Quiz1_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz1_3.resx">
+      <DependentUpon>Form_Quiz1_3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quiz2_1.resx">
+      <DependentUpon>Form_Quiz2_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLog.resx">
+      <DependentUpon>FormLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Easy English Alphabet_TemporaryKey.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\YesSound.wav" />
+    <None Include="Resources\B_is_for_ball.wav" />
+    <None Include="Resources\D_is_for_dog.wav" />
+    <None Include="Resources\G_is_for_guinea_pig.wav" />
+    <None Include="Resources\H_is_for_horse.wav" />
+    <None Include="Resources\J_is_for_jam.wav" />
+    <None Include="Resources\M_is_for_meerkat.wav" />
+    <None Include="Resources\N_is_for_nail.wav" />
+    <None Include="Resources\O_is_for_orange.wav" />
+    <None Include="Resources\S_is_for_sun.wav" />
+    <None Include="Resources\T_is_for_teddy.wav" />
+    <None Include="Resources\U_is_for_unicorn.wav" />
+    <None Include="Resources\V_is_for_violin.wav" />
+    <None Include="Resources\W_is_for_wall.wav" />
+    <None Include="Resources\A_is_for_apple.wav" />
+    <None Include="Resources\C_is_for_cat.wav" />
+    <None Include="Resources\E_is_for_elephant.wav" />
+    <None Include="Resources\F_is_for_fish.wav" />
+    <None Include="Resources\I_is_for_icecream.wav" />
+    <None Include="Resources\K_is_for_kite.wav" />
+    <None Include="Resources\L_is_for_ladybird.wav" />
+    <None Include="Resources\P_is_for_pig.wav" />
+    <None Include="Resources\Q_is_for_queen.wav" />
+    <None Include="Resources\R_is_for_rocket.wav" />
+    <None Include="Resources\X_is_for_xylophone.wav" />
+    <None Include="Resources\Y_is_for_yoga.wav" />
+    <None Include="Resources\Z_is_for_zebra.wav" />
+    <None Include="Resources\NoSound.wav" />
+    <None Include="Resources\TITLE_HEADER_MEDIUM.png" />
+    <None Include="Resources\LOGO.png" />
+    <None Include="Resources\Zebra.png" />
+    <None Include="Resources\Z.png" />
+    <None Include="Resources\Yoga.png" />
+    <None Include="Resources\Y.png" />
+    <None Include="Resources\Xylophone.png" />
+    <None Include="Resources\X.png" />
+    <None Include="Resources\Wall.png" />
+    <None Include="Resources\W.png" />
+    <None Include="Resources\Violin.png" />
+    <None Include="Resources\V.png" />
+    <None Include="Resources\Unicorn.png" />
+    <None Include="Resources\U.png" />
+    <None Include="Resources\tick2.png" />
+    <None Include="Resources\Teddy.png" />
+    <None Include="Resources\Take_Quiz.png" />
+    <None Include="Resources\T.png" />
+    <None Include="Resources\S-Z.png" />
+    <None Include="Resources\Sun.png" />
+    <None Include="Resources\Start.png" />
+    <None Include="Resources\S.png" />
+    <None Include="Resources\Rocket.png" />
+    <None Include="Resources\R.png" />
+    <None Include="Resources\Quiz4_Page3.png" />
+    <None Include="Resources\Quiz4_Page2.png" />
+    <None Include="Resources\Quiz4_Page1.png" />
+    <None Include="Resources\Quiz3_Page3.png" />
+    <None Include="Resources\Quiz3_Page2.png" />
+    <None Include="Resources\Quiz3_Page1.png" />
+    <None Include="Resources\Quiz2_Page3.png" />
+    <None Include="Resources\Quiz2_Page2.png" />
+    <None Include="Resources\Quiz2_Page1.png" />
+    <None Include="Resources\Quiz1_Page3.png" />
+    <None Include="Resources\Quiz1_Page2.png" />
+    <None Include="Resources\Quiz1_Page1.png" />
+    <None Include="Resources\Quiz_3.png" />
+    <None Include="Resources\Quiz_2.png" />
+    <None Include="Resources\Quiz_1.png" />
+    <None Include="Resources\Queen.png" />
+    <None Include="Resources\Q.png" />
+    <None Include="Resources\Pig.png" />
+    <None Include="Resources\P.png" />
+    <None Include="Resources\Orange.png" />
+    <None Include="Resources\O.png" />
+    <None Include="Resources\Nail.png" />
+    <None Include="Resources\N.png" />
+    <None Include="Resources\Meerkat.png" />
+    <None Include="Resources\M.png" />
+    <None Include="Resources\Ladybird.png" />
+    <None Include="Resources\L.png" />
+    <None Include="Resources\Kite.png" />
+    <None Include="Resources\K.png" />
+    <None Include="Resources\J-R.png" />
+    <None Include="Resources\Jam.png" />
+    <None Include="Resources\J.png" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\Icecream.png" />
+    <None Include="Resources\I.png" />
+    <None Include="Resources\Horse.png" />
+    <None Include="Resources\H.png" />
+    <None Include="Resources\Guineapig.png" />
+    <None Include="Resources\G.png" />
+    <None Include="Resources\Fish.png" />
+    <None Include="Resources\F.png" />
+    <None Include="Resources\english-alphabet.png" />
+    <None Include="Resources\Elephant.png" />
+    <None Include="Resources\E.png" />
+    <None Include="Resources\Dog.png" />
+    <None Include="Resources\D.png" />
+    <None Include="Resources\cross2.png" />
+    <None Include="Resources\Cat.png" />
+    <None Include="Resources\C.png" />
+    <None Include="Resources\blank.png" />
+    <None Include="Resources\Ball.png" />
+    <None Include="Resources\B.png" />
+    <None Include="Resources\Apple.png" />
+    <None Include="Resources\A-I.png" />
+    <None Include="Resources\A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Easy_Alphabet.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Easy_Alphabet.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\am_logo_banner_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\am_logo_large_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\english-alphabet-front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\english-alphabet-front2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Microsoft.VisualBasic.PowerPacks.Vs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quiz_4.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\Fody.6.9.3\build\Fody.targets" Condition="Exists('..\packages\Fody.6.9.3\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.6.9.3\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.6.9.3\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.6.0.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.6.0.0\build\Costura.Fody.props'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.6.0.0\build\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.6.0.0\build\Costura.Fody.targets'))" />
+  </Target>
+  <Import Project="..\packages\Costura.Fody.6.0.0\build\Costura.Fody.targets" Condition="Exists('..\packages\Costura.Fody.6.0.0\build\Costura.Fody.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

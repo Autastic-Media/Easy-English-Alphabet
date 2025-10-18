@@ -14,4 +14,4 @@ Under the following conditions:
 - Do not sell, license, or monetize this software or its derivatives
 
 This project is intended to support autistic users through emotionally resonant, accessible software.  
-For questions, contributions, or ceremonial alignment, visit: https://github.com/Autastic-Meida
+For questions, contributions, or ceremonial alignment, visit: https://github.com/Autastic-Media
