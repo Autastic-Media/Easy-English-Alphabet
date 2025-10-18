@@ -11,8 +11,8 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("Easy English Alphabet")> 
 <Assembly: AssemblyDescription("Easy English Alphabet")> 
 <Assembly: AssemblyCompany("Autastic Media")> 
-<Assembly: AssemblyProduct("Easy English Alphabet")> 
-<Assembly: AssemblyCopyright("Copyright ©  2018")> 
+<Assembly: AssemblyProduct("Easy English Alphabet")>
+<Assembly: AssemblyCopyright("Copyright ©  2020-2025")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
