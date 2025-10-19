@@ -270,11 +270,6 @@ Partial Class Form0
         Me.Label2.Size = New System.Drawing.Size(55, 15)
         Me.Label2.TabIndex = 75
         Me.Label2.Text = "Volume: "
-        '
-        'ToolTip1
-        '
-        Me.ToolTip1.ToolTipTitle = "ToolStrip1"
-        '
         'AudioState
         '
         Me.AudioState.AutoSize = True
