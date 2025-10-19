@@ -167,6 +167,7 @@ Partial Class Form0
         Me.Button_Start.Name = "Button_Start"
         Me.Button_Start.Size = New System.Drawing.Size(110, 110)
         Me.Button_Start.TabIndex = 64
+        Me.ToolTip1.SetToolTip(Me.Button_Start, "Start learning")
         Me.Button_Start.UseVisualStyleBackColor = False
         '
         'Button_Next
