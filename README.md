@@ -5,7 +5,7 @@
 <p align="center"><em>Empowering autistic users through emotionally resonant, predictable, and accessible software.</em></p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Autastic-Media/home/main/assets/Easy_English_Alphabet_Logo.png" alt="Easy English Alphabet Logo" width="600"/>
+  <img src="https://raw.githubusercontent.com/Autastic-Media/home/main/assets/Easy_English_Alphabet_Logo2.png" alt="Easy English Alphabet Logo" width="600"/>
 </p>
 
 <p align="center"><strong>A calming, image-based quiz module for autistic learners.<br/>
