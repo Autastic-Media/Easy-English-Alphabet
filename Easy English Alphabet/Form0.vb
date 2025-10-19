@@ -140,4 +140,24 @@ Public Class Form0
         Form1.Show()
         Me.Hide()
     End Sub
+
+    Private Sub AudioState_Click(sender As Object, e As EventArgs) Handles AudioState.Click
+        If Globals.VolumeLevel > 0 Then
+            ' 🔈 Mute
+            lastVolumeBeforeMute = Globals.VolumeLevel
+            Globals.VolumeLevel = 0
+            TrackBar_Volume.Value = 0
+            Volume.Text = "🔈"
+            AudioState.Text = "Off"
+        Else
+            ' 🔊 Unmute
+            Globals.VolumeLevel = lastVolumeBeforeMute
+            TrackBar_Volume.Value = Globals.VolumeLevel
+            Volume.Text = "🔊"
+            AudioState.Text = "On"
+        End If
+
+        My.Settings.LastVolume = Globals.VolumeLevel / 100.0F
+        My.Settings.Save()
+    End Sub
 End Class

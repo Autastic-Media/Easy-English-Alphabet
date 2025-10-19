@@ -60,7 +60,7 @@ Part of the Easy Learning suite by Autastic Media.</strong></p>
 
 ## 🎓 Emotional Purpose
 
-**Easy English Alphabet – Take Quiz Module** is a learning sanctuary designed for autistic users who benefit from a calmer, more predictable sensory environment.
+**Easy English Alphabet** is a learning sanctuary designed for autistic users who benefit from a calmer, more predictable sensory environment.
 
 It offers:
 - Visual and auditory repetition to reinforce engagement and retention  
@@ -109,6 +109,6 @@ For more information, visit [Autastic Media Dev Team](https://github.com/Autasti
 
 ## 🏷️ Release
 
-**Version 1.0 – Take Quiz Module Sealed**  
+**Version 1.0**  
 Released: October 2025  
 Status: Stable  
