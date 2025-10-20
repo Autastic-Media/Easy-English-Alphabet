@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Button_Back = New System.Windows.Forms.Button()
         Me.Button_Next = New System.Windows.Forms.Button()
@@ -34,28 +35,30 @@ Partial Class Form1
         Me.C = New System.Windows.Forms.Button()
         Me.B = New System.Windows.Forms.Button()
         Me.A = New System.Windows.Forms.Button()
-        Me.Button_Close = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'Button_Back
         '
         Me.Button_Back.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button_Back.Location = New System.Drawing.Point(22, 406)
+        Me.Button_Back.Location = New System.Drawing.Point(82, 406)
         Me.Button_Back.Name = "Button_Back"
         Me.Button_Back.Size = New System.Drawing.Size(100, 40)
-        Me.Button_Back.TabIndex = 36
+        Me.Button_Back.TabIndex = 9
         Me.Button_Back.Text = "Back"
+        Me.ToolTip1.SetToolTip(Me.Button_Back, "Return to main menu")
         Me.Button_Back.UseVisualStyleBackColor = True
         '
         'Button_Next
         '
         Me.Button_Next.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button_Next.Location = New System.Drawing.Point(234, 406)
+        Me.Button_Next.Location = New System.Drawing.Point(188, 406)
         Me.Button_Next.Name = "Button_Next"
         Me.Button_Next.Size = New System.Drawing.Size(100, 40)
-        Me.Button_Next.TabIndex = 37
+        Me.Button_Next.TabIndex = 10
         Me.Button_Next.Text = "Next"
+        Me.ToolTip1.SetToolTip(Me.Button_Next, "Continue to J-R Letters")
         Me.Button_Next.UseVisualStyleBackColor = True
         '
         'I
@@ -65,7 +68,7 @@ Partial Class Form1
         Me.I.Location = New System.Drawing.Point(244, 244)
         Me.I.Name = "I"
         Me.I.Size = New System.Drawing.Size(110, 110)
-        Me.I.TabIndex = 32
+        Me.I.TabIndex = 8
         Me.I.UseVisualStyleBackColor = True
         '
         'H
@@ -75,7 +78,7 @@ Partial Class Form1
         Me.H.Location = New System.Drawing.Point(128, 244)
         Me.H.Name = "H"
         Me.H.Size = New System.Drawing.Size(110, 110)
-        Me.H.TabIndex = 9
+        Me.H.TabIndex = 7
         Me.H.UseVisualStyleBackColor = True
         '
         'G
@@ -85,7 +88,7 @@ Partial Class Form1
         Me.G.Location = New System.Drawing.Point(12, 244)
         Me.G.Name = "G"
         Me.G.Size = New System.Drawing.Size(110, 110)
-        Me.G.TabIndex = 7
+        Me.G.TabIndex = 6
         Me.G.UseVisualStyleBackColor = True
         '
         'F
@@ -95,7 +98,7 @@ Partial Class Form1
         Me.F.Location = New System.Drawing.Point(244, 128)
         Me.F.Name = "F"
         Me.F.Size = New System.Drawing.Size(110, 110)
-        Me.F.TabIndex = 6
+        Me.F.TabIndex = 5
         Me.F.UseVisualStyleBackColor = True
         '
         'E
@@ -105,7 +108,7 @@ Partial Class Form1
         Me.E.Location = New System.Drawing.Point(128, 128)
         Me.E.Name = "E"
         Me.E.Size = New System.Drawing.Size(110, 110)
-        Me.E.TabIndex = 5
+        Me.E.TabIndex = 4
         Me.E.UseVisualStyleBackColor = True
         '
         'D
@@ -115,7 +118,7 @@ Partial Class Form1
         Me.D.Location = New System.Drawing.Point(12, 128)
         Me.D.Name = "D"
         Me.D.Size = New System.Drawing.Size(110, 110)
-        Me.D.TabIndex = 4
+        Me.D.TabIndex = 3
         Me.D.UseVisualStyleBackColor = True
         '
         'C
@@ -125,7 +128,7 @@ Partial Class Form1
         Me.C.Location = New System.Drawing.Point(244, 12)
         Me.C.Name = "C"
         Me.C.Size = New System.Drawing.Size(110, 110)
-        Me.C.TabIndex = 3
+        Me.C.TabIndex = 2
         Me.C.UseVisualStyleBackColor = True
         '
         'B
@@ -135,7 +138,7 @@ Partial Class Form1
         Me.B.Location = New System.Drawing.Point(128, 12)
         Me.B.Name = "B"
         Me.B.Size = New System.Drawing.Size(110, 110)
-        Me.B.TabIndex = 2
+        Me.B.TabIndex = 1
         Me.B.UseVisualStyleBackColor = True
         '
         'A
@@ -145,18 +148,8 @@ Partial Class Form1
         Me.A.Location = New System.Drawing.Point(12, 12)
         Me.A.Name = "A"
         Me.A.Size = New System.Drawing.Size(110, 110)
-        Me.A.TabIndex = 1
+        Me.A.TabIndex = 0
         Me.A.UseVisualStyleBackColor = False
-        '
-        'Button_Close
-        '
-        Me.Button_Close.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button_Close.Location = New System.Drawing.Point(128, 406)
-        Me.Button_Close.Name = "Button_Close"
-        Me.Button_Close.Size = New System.Drawing.Size(100, 40)
-        Me.Button_Close.TabIndex = 57
-        Me.Button_Close.Text = "Close"
-        Me.Button_Close.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
@@ -179,7 +172,6 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(370, 458)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button_Close)
         Me.Controls.Add(Me.Button_Next)
         Me.Controls.Add(Me.Button_Back)
         Me.Controls.Add(Me.I)
@@ -212,7 +204,6 @@ Partial Class Form1
     Friend WithEvents I As System.Windows.Forms.Button
     Friend WithEvents Button_Back As System.Windows.Forms.Button
     Friend WithEvents Button_Next As System.Windows.Forms.Button
-    Friend WithEvents Button_Close As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

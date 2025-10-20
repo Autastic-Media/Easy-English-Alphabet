@@ -22,6 +22,7 @@ Partial Class Form_Quiz1_3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Quiz1_3))
         Me.Orange = New System.Windows.Forms.Button()
         Me.lblScore = New System.Windows.Forms.Label()
@@ -41,6 +42,7 @@ Partial Class Form_Quiz1_3
         Me.Cat = New System.Windows.Forms.Button()
         Me.Button_Close = New System.Windows.Forms.Button()
         Me.Button_Menu = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.YN3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.YN2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.YN1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -247,8 +249,9 @@ Partial Class Form_Quiz1_3
         Me.Button_Close.Location = New System.Drawing.Point(13, 450)
         Me.Button_Close.Name = "Button_Close"
         Me.Button_Close.Size = New System.Drawing.Size(136, 50)
-        Me.Button_Close.TabIndex = 59
+        Me.Button_Close.TabIndex = 0
         Me.Button_Close.Text = "Close"
+        Me.ToolTip1.SetToolTip(Me.Button_Close, "Close application")
         Me.Button_Close.UseVisualStyleBackColor = False
         '
         'Button_Menu
@@ -259,8 +262,9 @@ Partial Class Form_Quiz1_3
         Me.Button_Menu.Location = New System.Drawing.Point(155, 450)
         Me.Button_Menu.Name = "Button_Menu"
         Me.Button_Menu.Size = New System.Drawing.Size(136, 50)
-        Me.Button_Menu.TabIndex = 49
+        Me.Button_Menu.TabIndex = 1
         Me.Button_Menu.Text = "Main Menu"
+        Me.ToolTip1.SetToolTip(Me.Button_Menu, "Return to main menu")
         Me.Button_Menu.UseVisualStyleBackColor = False
         '
         'Form_Quiz1_3
@@ -269,6 +273,7 @@ Partial Class Form_Quiz1_3
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(441, 515)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Orange)
         Me.Controls.Add(Me.lblScore)
         Me.Controls.Add(Me.Button_Close)
@@ -318,5 +323,5 @@ Partial Class Form_Quiz1_3
     Friend WithEvents Cat As System.Windows.Forms.Button
     Friend WithEvents Button_Close As System.Windows.Forms.Button
     Friend WithEvents Button_Menu As System.Windows.Forms.Button
-
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

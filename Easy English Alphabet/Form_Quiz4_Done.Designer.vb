@@ -148,6 +148,7 @@ Partial Class FormQ4_Done
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(460, 554)
+        Me.ControlBox = False
         Me.Controls.Add(Me.lblDateTime)
         Me.Controls.Add(Me.txtUserName)
         Me.Controls.Add(Me.Label2)

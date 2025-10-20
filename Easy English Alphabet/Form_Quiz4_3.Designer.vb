@@ -65,7 +65,7 @@ Partial Class Form_Quiz4_3
         Me.Button_Close.Location = New System.Drawing.Point(13, 450)
         Me.Button_Close.Name = "Button_Close"
         Me.Button_Close.Size = New System.Drawing.Size(136, 50)
-        Me.Button_Close.TabIndex = 59
+        Me.Button_Close.TabIndex = 0
         Me.Button_Close.Text = "Close"
         Me.Button_Close.UseVisualStyleBackColor = False
         '
@@ -114,7 +114,7 @@ Partial Class Form_Quiz4_3
         Me.Button_Menu.Location = New System.Drawing.Point(155, 450)
         Me.Button_Menu.Name = "Button_Menu"
         Me.Button_Menu.Size = New System.Drawing.Size(136, 50)
-        Me.Button_Menu.TabIndex = 49
+        Me.Button_Menu.TabIndex = 1
         Me.Button_Menu.Text = "Main Menu"
         Me.Button_Menu.UseVisualStyleBackColor = False
         '
@@ -263,12 +263,13 @@ Partial Class Form_Quiz4_3
         Me.Rocket.TabIndex = 79
         Me.Rocket.UseVisualStyleBackColor = False
         '
-        'Form17
+        'Form_Quiz4_3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(441, 515)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Orange)
         Me.Controls.Add(Me.Yoga)
         Me.Controls.Add(Me.Queen)
@@ -290,7 +291,7 @@ Partial Class Form_Quiz4_3
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "Form17"
+        Me.Name = "Form_Quiz4_3"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "English Alphabet Quiz 4"
         CType(Me.YN3, System.ComponentModel.ISupportInitialize).EndInit()

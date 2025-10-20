@@ -22,6 +22,7 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.Button_Next = New System.Windows.Forms.Button()
         Me.Button_Back = New System.Windows.Forms.Button()
@@ -36,6 +37,7 @@ Partial Class Form2
         Me.J = New System.Windows.Forms.Button()
         Me.Button_Close = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'Button_Next
@@ -44,8 +46,9 @@ Partial Class Form2
         Me.Button_Next.Location = New System.Drawing.Point(234, 406)
         Me.Button_Next.Name = "Button_Next"
         Me.Button_Next.Size = New System.Drawing.Size(100, 40)
-        Me.Button_Next.TabIndex = 52
+        Me.Button_Next.TabIndex = 11
         Me.Button_Next.Text = "Next"
+        Me.ToolTip1.SetToolTip(Me.Button_Next, "Continue to S-Z")
         Me.Button_Next.UseVisualStyleBackColor = True
         '
         'Button_Back
@@ -54,8 +57,9 @@ Partial Class Form2
         Me.Button_Back.Location = New System.Drawing.Point(22, 406)
         Me.Button_Back.Name = "Button_Back"
         Me.Button_Back.Size = New System.Drawing.Size(100, 40)
-        Me.Button_Back.TabIndex = 51
+        Me.Button_Back.TabIndex = 9
         Me.Button_Back.Text = "Back"
+        Me.ToolTip1.SetToolTip(Me.Button_Back, "Return to A-I")
         Me.Button_Back.UseVisualStyleBackColor = True
         '
         'R
@@ -65,7 +69,7 @@ Partial Class Form2
         Me.R.Location = New System.Drawing.Point(244, 244)
         Me.R.Name = "R"
         Me.R.Size = New System.Drawing.Size(110, 110)
-        Me.R.TabIndex = 49
+        Me.R.TabIndex = 8
         Me.R.UseVisualStyleBackColor = True
         '
         'Q
@@ -75,7 +79,7 @@ Partial Class Form2
         Me.Q.Location = New System.Drawing.Point(128, 244)
         Me.Q.Name = "Q"
         Me.Q.Size = New System.Drawing.Size(110, 110)
-        Me.Q.TabIndex = 48
+        Me.Q.TabIndex = 7
         Me.Q.UseVisualStyleBackColor = True
         '
         'P
@@ -85,7 +89,7 @@ Partial Class Form2
         Me.P.Location = New System.Drawing.Point(12, 244)
         Me.P.Name = "P"
         Me.P.Size = New System.Drawing.Size(110, 110)
-        Me.P.TabIndex = 47
+        Me.P.TabIndex = 6
         Me.P.UseVisualStyleBackColor = True
         '
         'O
@@ -95,7 +99,7 @@ Partial Class Form2
         Me.O.Location = New System.Drawing.Point(244, 128)
         Me.O.Name = "O"
         Me.O.Size = New System.Drawing.Size(110, 110)
-        Me.O.TabIndex = 46
+        Me.O.TabIndex = 5
         Me.O.UseVisualStyleBackColor = True
         '
         'N
@@ -105,7 +109,7 @@ Partial Class Form2
         Me.N.Location = New System.Drawing.Point(128, 128)
         Me.N.Name = "N"
         Me.N.Size = New System.Drawing.Size(110, 110)
-        Me.N.TabIndex = 45
+        Me.N.TabIndex = 4
         Me.N.UseVisualStyleBackColor = True
         '
         'M
@@ -115,7 +119,7 @@ Partial Class Form2
         Me.M.Location = New System.Drawing.Point(12, 128)
         Me.M.Name = "M"
         Me.M.Size = New System.Drawing.Size(110, 110)
-        Me.M.TabIndex = 44
+        Me.M.TabIndex = 3
         Me.M.UseVisualStyleBackColor = True
         '
         'L
@@ -125,7 +129,7 @@ Partial Class Form2
         Me.L.Location = New System.Drawing.Point(244, 12)
         Me.L.Name = "L"
         Me.L.Size = New System.Drawing.Size(110, 110)
-        Me.L.TabIndex = 43
+        Me.L.TabIndex = 2
         Me.L.UseVisualStyleBackColor = True
         '
         'K
@@ -135,7 +139,7 @@ Partial Class Form2
         Me.K.Location = New System.Drawing.Point(128, 12)
         Me.K.Name = "K"
         Me.K.Size = New System.Drawing.Size(110, 110)
-        Me.K.TabIndex = 42
+        Me.K.TabIndex = 1
         Me.K.UseVisualStyleBackColor = True
         '
         'J
@@ -145,7 +149,7 @@ Partial Class Form2
         Me.J.Location = New System.Drawing.Point(12, 12)
         Me.J.Name = "J"
         Me.J.Size = New System.Drawing.Size(110, 110)
-        Me.J.TabIndex = 41
+        Me.J.TabIndex = 0
         Me.J.UseVisualStyleBackColor = True
         '
         'Button_Close
@@ -154,8 +158,9 @@ Partial Class Form2
         Me.Button_Close.Location = New System.Drawing.Point(128, 406)
         Me.Button_Close.Name = "Button_Close"
         Me.Button_Close.Size = New System.Drawing.Size(100, 40)
-        Me.Button_Close.TabIndex = 53
+        Me.Button_Close.TabIndex = 10
         Me.Button_Close.Text = "Close"
+        Me.ToolTip1.SetToolTip(Me.Button_Close, "Return to main menu")
         Me.Button_Close.UseVisualStyleBackColor = True
         '
         'TextBox1
@@ -214,5 +219,5 @@ Partial Class Form2
     Friend WithEvents Button_Back As System.Windows.Forms.Button
     Friend WithEvents Button_Close As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

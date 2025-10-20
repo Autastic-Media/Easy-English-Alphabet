@@ -22,6 +22,7 @@ Partial Class Form_Quiz1_1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Quiz1_1))
         Me.YN3 = New System.Windows.Forms.PictureBox()
         Me.Horse = New System.Windows.Forms.Button()
@@ -41,6 +42,7 @@ Partial Class Form_Quiz1_1
         Me.Ball = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Apple = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.YN3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.YN2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.YN1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,8 +89,9 @@ Partial Class Form_Quiz1_1
         Me.Button_Close.Location = New System.Drawing.Point(13, 450)
         Me.Button_Close.Name = "Button_Close"
         Me.Button_Close.Size = New System.Drawing.Size(136, 50)
-        Me.Button_Close.TabIndex = 19
+        Me.Button_Close.TabIndex = 0
         Me.Button_Close.Text = "Close"
+        Me.ToolTip1.SetToolTip(Me.Button_Close, "Return to main menu")
         Me.Button_Close.UseVisualStyleBackColor = False
         '
         'Meerkat
@@ -198,8 +201,9 @@ Partial Class Form_Quiz1_1
         Me.Button_Next.Location = New System.Drawing.Point(155, 450)
         Me.Button_Next.Name = "Button_Next"
         Me.Button_Next.Size = New System.Drawing.Size(136, 50)
-        Me.Button_Next.TabIndex = 6
+        Me.Button_Next.TabIndex = 1
         Me.Button_Next.Text = "Next"
+        Me.ToolTip1.SetToolTip(Me.Button_Next, "Continue to next screen")
         Me.Button_Next.UseVisualStyleBackColor = False
         '
         'YN1
@@ -263,12 +267,13 @@ Partial Class Form_Quiz1_1
         Me.Apple.TabIndex = 0
         Me.Apple.UseVisualStyleBackColor = False
         '
-        'Form6
+        'Form_Quiz1_1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(441, 515)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Horse)
         Me.Controls.Add(Me.lblScore)
         Me.Controls.Add(Me.Button_Close)
@@ -289,7 +294,7 @@ Partial Class Form_Quiz1_1
         Me.Controls.Add(Me.Apple)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Form6"
+        Me.Name = "Form_Quiz1_1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "English Alphabet Quiz 1"
         CType(Me.YN3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -317,5 +322,5 @@ Partial Class Form_Quiz1_1
     Friend WithEvents Ball As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Apple As System.Windows.Forms.Button
-
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

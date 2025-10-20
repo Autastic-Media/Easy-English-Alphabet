@@ -65,7 +65,7 @@ Partial Class Form_Quiz2_1
         Me.Button_Close.Location = New System.Drawing.Point(13, 450)
         Me.Button_Close.Name = "Button_Close"
         Me.Button_Close.Size = New System.Drawing.Size(136, 50)
-        Me.Button_Close.TabIndex = 19
+        Me.Button_Close.TabIndex = 0
         Me.Button_Close.Text = "Close"
         Me.Button_Close.UseVisualStyleBackColor = False
         '
@@ -114,7 +114,7 @@ Partial Class Form_Quiz2_1
         Me.Button_Next.Location = New System.Drawing.Point(155, 450)
         Me.Button_Next.Name = "Button_Next"
         Me.Button_Next.Size = New System.Drawing.Size(136, 50)
-        Me.Button_Next.TabIndex = 6
+        Me.Button_Next.TabIndex = 1
         Me.Button_Next.Text = "Next"
         Me.Button_Next.UseVisualStyleBackColor = False
         '
@@ -263,12 +263,13 @@ Partial Class Form_Quiz2_1
         Me.Apple.TabIndex = 26
         Me.Apple.UseVisualStyleBackColor = False
         '
-        'Form9
+        'Form_Quiz2_1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(441, 515)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Horse)
         Me.Controls.Add(Me.Pig)
         Me.Controls.Add(Me.Queen)
@@ -289,7 +290,7 @@ Partial Class Form_Quiz2_1
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Form9"
+        Me.Name = "Form_Quiz2_1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "English Alphabet Quiz 2"
         CType(Me.YN3, System.ComponentModel.ISupportInitialize).EndInit()

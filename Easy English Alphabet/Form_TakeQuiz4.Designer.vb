@@ -39,7 +39,7 @@ Partial Class Form_TakeQuiz4
         Me.btnStartQuiz.Location = New System.Drawing.Point(172, 296)
         Me.btnStartQuiz.Name = "btnStartQuiz"
         Me.btnStartQuiz.Size = New System.Drawing.Size(79, 28)
-        Me.btnStartQuiz.TabIndex = 55
+        Me.btnStartQuiz.TabIndex = 1
         Me.btnStartQuiz.Text = "Start Quiz"
         Me.btnStartQuiz.UseVisualStyleBackColor = True
         '
@@ -49,7 +49,7 @@ Partial Class Form_TakeQuiz4
         Me.btnClose.Location = New System.Drawing.Point(257, 296)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(83, 28)
-        Me.btnClose.TabIndex = 56
+        Me.btnClose.TabIndex = 2
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
